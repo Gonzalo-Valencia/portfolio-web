@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Trial Gonzalo Portfolio</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="/images/web_icon.png" />
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <!-- header in header.html -->
+        <div id="header"></div>
+
+        <main>
+            <div class="gallery">
+                <img 
+                    src="images\main-gallery\españa-en-llamas.png" 
+                    alt="España En Llamas" 
+                    onclick="openImage(0)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/doll-dying.png"
+                    alt="Doll Dying" 
+                    onclick="openImage(1)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/rotten-still-life.png"
+                    alt="Rotten Still Life"
+                    onclick="openImage(2)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images\main-gallery\church-of-sac.png"
+                    alt="Church Of Sacrifice"
+                    onclick="openImage(3)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/fires-of-altasfauces.jpg"
+                    alt="Fires Of Altasfauces"
+                    onclick="openImage(4)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/vent-art-iii.png"
+                    alt="Vent Art III"
+                    onclick="openImage(5)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/vent-art-ii.png"
+                    alt="Vent Art II"
+                    onclick="openImage(6)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/vent-art-i.jpg"
+                    alt="Vent Art I"
+                    onclick="openImage(7)"
+                    class="gallery-img"
+                />
+
+                <img 
+                    src="images/main-gallery/hirasol.png"
+                    alt="Hirasol"
+                    onclick="openImage(8)"
+                    class="gallery-img"
+                />
+            </div>
+            <div id="lightbox" onclick="closeOnOutsideClick(event)">
+                <span class="close" onclick="closeImage()">&times;</span>
+
+                <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+
+                <img id="expanded-img">
+
+                <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </main>
+        
+        <!-- footer in footer.html -->
+        <div id="footer"></div>
+    </body>
+</html>

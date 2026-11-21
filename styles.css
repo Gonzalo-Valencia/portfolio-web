@@ -1,0 +1,326 @@
+@font-face {
+    font-family: Apple-Garamond;
+    src: url(AppleGaramond.ttf)
+}
+@font-face {
+    font-family: Apple-Garamond-light;
+    src: url(AppleGaramond-light.ttf)
+}
+@font-face {
+    font-family: Apple-Garamond-light-italic;
+    src: url(AppleGaramond-LightItalic.ttf)
+}
+@font-face {
+    font-family: Timeless-bold;
+    src: url(Timeless.ttf)
+}
+@font-face {
+    font-family: Zeit-light;
+    src: url(Zeit-Light.otf)
+}
+@font-face {
+    font-family: Geo-sans-light;
+    src: url(GeosansLight.ttf)
+}
+
+
+
+body {
+    background-color: #1c1919;
+    margin: auto;
+}
+
+/* ----------------- FOR THE HEADER ----------------- */
+#title {
+    text-align: center;
+}
+#header-header {
+    height: 50px
+}
+header {
+    background-color: crimson;
+    margin: auto;
+    margin-top:0px;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+header h1 {
+    font-family: Apple-Garamond;
+    font-weight: normal;
+    font-size: 3vw;
+    line-height: 0px;
+}
+header h3 {
+    font-family: Apple-Garamond-light-italic;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 0.5vw;
+}
+header nav {
+    height: 20px;
+}
+header hr {
+    margin-top:40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    opacity: 0.75;
+}
+.column-container {
+    /* border-style: dashed; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 0px;
+    position:relative;
+    bottom:10px;
+}
+.column {
+    border-radius: 10px;
+}
+header nav a{
+    font-family: Geo-sans-light;
+    font-size: 1.3em;
+    color: black;
+    text-decoration: none;
+    transition: font-size 0.2s ease;
+    transform-origin: center;
+}
+header nav a:hover {
+    font-size: 1.6em;
+}
+
+header nav a.active {
+    font-weight: bold;
+}
+
+/* ----------------- FOR THE PORTFOLIO ----------------- */
+.portfolio {
+    color:whitesmoke;
+}
+
+.portfolio img{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio .gallery-img:hover {
+    transform: scale(1.02);
+}
+
+/* ----------------- FOR THE MAIN GALLERY ----------------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Spacing between images */
+  padding:15px; 
+}
+
+.gallery img {
+  width: auto;   /* Width is a percentage of the page (fewer per row as screen shrinks) */
+  height: var(--row-height, 25vw);
+  object-fit: cover;
+}
+
+.gallery-img {
+    /* width: 200px; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Fullscreen background */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Expanded image */
+#expanded-img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+}
+
+/* Navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.arrow:hover {
+    color: #aaa;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+/* ----------------- FOR THE GRIDS ----------------- */
+.art-grid {
+  display: flex;
+  width: 100%;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.art-column {
+  width: 50%;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.art-column .gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.art-column-super-container {
+    /* border-style: dashed; */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 10px;
+}
+
+.art-super-column{
+    /* border-style: dashed; */
+    width: 100%;
+    min-width: 0;
+}
+ 
+.art-super-column > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.art-column-super-container h3 {
+    font-size: 45px;
+    line-height: 40px;
+    margin: 0px;
+    margin-bottom: 8px;
+    color:whitesmoke;
+    opacity:90%;
+}
+/* ----------------- FOR THE INFO ----------------- */
+
+.info {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding:30px;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    gap:40px;
+
+
+    color:whitesmoke;
+    font-family: Apple-Garamond;
+    font-weight: lighter;
+    font-size: 1.6em;
+}
+
+.info h2{
+    font-weight: normal;
+}
+.info p{
+    font-weight: light;
+    font-family: Geo-sans-light;
+}
+
+.info h6{
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: Apple-Garamond-light-italic;
+}
+
+
+.info .text-info{
+    width: 65%;
+}
+
+.info .image-info{
+    width: 35%;
+}
+
+.info .image-info img{
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+/* ----------------- FOR THE FOOTER ----------------- */
+nav{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.link-gallery a {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.link-gallery img {
+    width: auto;
+    height: 45px;
+    transition: 0.1s;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.link-gallery img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+footer p {
+    text-align: center;
+    color:whitesmoke;
+    opacity: 0.80;
+}
