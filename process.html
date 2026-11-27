@@ -13,24 +13,85 @@
         <div id="header"></div>
         
         <main>
-
             <!-------------------------- Doll Process -------------------------->
-            <div alt="Doll Dying Piece">
+            <div alt="Justice">
                 <div class="art-column-super-container">
+                    
                     <div class="art-super-column">
+
+                        <img 
+                                src="images/process/justice/justice-final.png"
+                                onclick="openImage(0)"
+                                class="gallery-img"
+                        />
+                            
+                    </div>
+                    <div class="art-super-column">
+                        <h3>Chroma Corps 2026 Entry</h3>
+                        <div class="art-grid">
+                                <div class="art-column">
+                                    <img 
+                                        src="images/process/justice/justice-exp-3.png" 
+                                        onclick="openImage(1)"
+                                        class="gallery-img"
+                                    />
+
+                                    <video width="400" controls
+                                    class="gallery-img"
+                                    >
+                                    <source src="images/process/justice/justice-video.mp4" type="video/mp4">
+                                    Your browser does not support HTML video.
+                                    </video>
+                                </div>
+
+                                <div class="art-column">
+                                    <img 
+                                        src="images/process/justice/justice-exp-2.png"
+                                        onclick="openImage(2)"
+                                        class="gallery-img"
+                                    />
+
+                                    <img 
+                                        src="images/process/justice/justice-exp-1.png"
+                                        onclick="openImage(3)"
+                                        class="gallery-img"
+                                    />
+
+
+                                </div>
+                            </div>
+                
+                    </div>
+                    <div id="lightbox" onclick="closeOnOutsideClick(event)">
+                            <span class="close" onclick="closeImage()">&times;</span>
+
+                            <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+
+                            <img id="expanded-img">
+
+                            <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------- Paradise Process -------------------------->
+            <div alt="Paradise">
+                <div class="art-column-super-container">
+                    
+                    <div class="art-super-column">
+                        <span class="text-right"><h3>Paradise</h3></span>
+                            
                             <div class="art-grid">
                                 <div class="art-column">
                                     <img 
                                         src="images/process/paradise/paradise-thumbs-1.png" 
-                                        alt="España En Llamas" 
-                                        onclick="openImage(0)"
+                                        onclick="openImage(4)"
                                         class="gallery-img"
                                     />
 
                                     <img 
                                         src="images/process/paradise/paradise-thumbs-2.png"
-                                        alt="Doll Dying" 
-                                        onclick="openImage(1)"
+                                        onclick="openImage(5)"
                                         class="gallery-img"
                                     />
                                 </div>
@@ -38,13 +99,11 @@
                                 <div class="art-column">
                                     <img 
                                         src="images/process/paradise/paradise-values.png"
-                                        alt="Rotten Still Life"
-                                        onclick="openImage(2)"
+                                        onclick="openImage(6)"
                                         class="gallery-img"
                                     />
 
-                                    <video width="400" controls
-                                    alt="Rotten Still Life" class="gallery-img"
+                                    <video width="400" controls class="gallery-img"
                                     >
                                     <source src="images/process/paradise/paradise-video.mp4" type="video/mp4">
                                     Your browser does not support HTML video.
@@ -53,11 +112,9 @@
                             </div>
                     </div>
                     <div class="art-super-column">
-                            <h3>TITLE</h3>
                             <img 
                                 src="images/process/paradise/paradise-final.png"
-                                alt="Church Of Sacrifice"
-                                onclick="openImage(3)"
+                                onclick="openImage(7)"
                                 class="gallery-img"
                             />
                     </div>
@@ -73,111 +130,51 @@
                 </div>
             </div>
             <!-------------------------- Doll Process -------------------------->
-            <div alt="Doll Dying Piece">
+            <div alt="Doll">
                 <div class="art-column-super-container">
+                    
                     <div class="art-super-column">
-                            <div class="art-grid">
+
+                        <img 
+                                src="images/process/doll/doll-dying-final.png"
+                                onclick="openImage(8)"
+                                class="gallery-img"
+                        />
+                            
+                    </div>
+                    <div class="art-super-column">
+                        <h3>Doll & Scissors</h3>
+                        <div class="art-grid">
                                 <div class="art-column">
                                     <img 
-                                        src="images/process/paradise/paradise-thumbs-1.png" 
-                                        alt="España En Llamas" 
-                                        onclick="openImage(0)"
+                                        src="images/process/doll/doll-dying-lineart.png" 
+                                        onclick="openImage(9)"
                                         class="gallery-img"
                                     />
 
-                                    <img 
-                                        src="images/process/paradise/paradise-thumbs-2.png"
-                                        alt="Doll Dying" 
-                                        onclick="openImage(1)"
-                                        class="gallery-img"
-                                    />
-                                </div>
-
-                                <div class="art-column">
-                                    <img 
-                                        src="images/process/paradise/paradise-values.png"
-                                        alt="Rotten Still Life"
-                                        onclick="openImage(2)"
-                                        class="gallery-img"
-                                    />
-
-                                    <video width="400" controls
-                                    alt="Rotten Still Life" class="gallery-img"
+                                    <video width="400" controls class="gallery-img"
                                     >
-                                    <source src="images/process/paradise/paradise-video.mp4" type="video/mp4">
+                                    <source src="images/process/doll/doll-dying-video.mp4" type="video/mp4">
                                     Your browser does not support HTML video.
                                     </video>
                                 </div>
-                            </div>
-                    </div>
-                    <div class="art-super-column">
-                            <h3>TITLE</h3>
-                            <img 
-                                src="images/process/paradise/paradise-final.png"
-                                alt="Church Of Sacrifice"
-                                onclick="openImage(3)"
-                                class="gallery-img"
-                            />
-                    </div>
-                    <div id="lightbox" onclick="closeOnOutsideClick(event)">
-                            <span class="close" onclick="closeImage()">&times;</span>
-
-                            <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
-
-                            <img id="expanded-img">
-
-                            <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-------------------------- Doll Process -------------------------->
-            <div alt="Doll Dying Piece">
-                <div class="art-column-super-container">
-                    <div class="art-super-column">
-                            <div class="art-grid">
-                                <div class="art-column">
-                                    <img 
-                                        src="images/process/paradise/paradise-thumbs-1.png" 
-                                        alt="España En Llamas" 
-                                        onclick="openImage(0)"
-                                        class="gallery-img"
-                                    />
-
-                                    <img 
-                                        src="images/process/paradise/paradise-thumbs-2.png"
-                                        alt="Doll Dying" 
-                                        onclick="openImage(1)"
-                                        class="gallery-img"
-                                    />
-                                </div>
 
                                 <div class="art-column">
                                     <img 
-                                        src="images/process/paradise/paradise-values.png"
-                                        alt="Rotten Still Life"
-                                        onclick="openImage(2)"
+                                        src="images/process/doll/doll-dying-color.png"
+                                        onclick="openImage(10)"
                                         class="gallery-img"
                                     />
 
-                                    <video width="400" controls
-                                    alt="Rotten Still Life" class="gallery-img"
-                                    >
-                                    <source src="images/process/paradise/paradise-video.mp4" type="video/mp4">
-                                    Your browser does not support HTML video.
-                                    </video>
+                                    <img 
+                                        src="images/process/doll/doll-dying-wip.png"
+                                        onclick="openImage(11)"
+                                        class="gallery-img"
+                                    />
+
                                 </div>
                             </div>
-                    </div>
-                    <div class="art-super-column">
-                            <h3>TITLE</h3>
-                            <img 
-                                src="images/process/paradise/paradise-final.png"
-                                alt="Church Of Sacrifice"
-                                onclick="openImage(3)"
-                                class="gallery-img"
-                            />
+                
                     </div>
                     <div id="lightbox" onclick="closeOnOutsideClick(event)">
                             <span class="close" onclick="closeImage()">&times;</span>

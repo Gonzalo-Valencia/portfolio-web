@@ -1,26 +1,46 @@
+
 import os
-import json
+from pathlib import Path
+from datetime import datetime
 
-"""A program that takes the images in image_dir and writes the html code automatically for the
-gallery"""
+# Configuration
+IMAGE_FOLDER = Path("images\portraits")
+OUTPUT_FILE = Path("gallery.html")
 
-# Define folders and files
-image_dir = 'images/portraits/'
-output_file = 'code.txt'
+# Supported image formats
+IMAGE_EXTENSIONS = {
+    ".jpg", ".jpeg", ".png", ".gif",
+    ".webp", ".bmp", ".tiff", ".svg"
+}
 
-# Allowed image extensions
-image_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg')
+
+def generate_gallery():
+    # Find all images in the folder
+    images = [
+        file for file in IMAGE_FOLDER.iterdir()
+        if file.is_file() and file.suffix.lower() in IMAGE_EXTENSIONS
+    ]
+
+    # Sort by modification date (newest first)
+    images.sort(key=lambda file: file.stat().st_mtime, reverse=True)
+
+    # Generate HTML
+    html = []
+
+    for position, image in enumerate(images):
+        relative_path = image.as_posix()
+
+        html.append(f'''                <img 
+                    src="{relative_path}"
+                    onclick="openImage({position})"
+                    class="gallery-img"
+                />''')
+
+    # Write output file
+    OUTPUT_FILE.write_text("\n\n".join(html), encoding="utf-8")
+
+    print(f"Generated {OUTPUT_FILE} with {len(images)} images.")
 
 
-# Scan the folder for files ending with image extensions
-image_files = [
-    image_name for image_name in os.listdir(image_dir)
-    if os.path.isfile(os.path.join(image_dir, image_name)) and image_name.lower().endswith(image_extensions)
-]
-
-with open(output_file, 'w') as f:
-    pass
-# Write the list to code.txt
-with open(output_file, 'a') as f:
-    for name in image_files:
-        f.write('<img src= "images/portraits/' + name + '"/>\n')
+if __name__ == "__main__":
+    generate_gallery()

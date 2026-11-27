@@ -63,7 +63,7 @@ let galleryIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    galleryImages = document.querySelectorAll(".gallery-img");
+    galleryImages = document.querySelectorAll(".gallery-img:not(video)");
 
     // Open image
     window.openImage = function(n) {

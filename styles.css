@@ -97,15 +97,81 @@ header nav a.active {
 /* ----------------- FOR THE PORTFOLIO ----------------- */
 .portfolio {
     color:whitesmoke;
+        box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding:30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    gap:40px;
+
+
+    color:whitesmoke;
+    text-decoration: none;
 }
 
-.portfolio img{
+
+.portfolio .text-info{
+    width: 20%;
+}
+
+.portfolio .image-info{
+    width: 80%;
+}
+
+.portfolio .image-info img{
+    height: auto;
     width: 100%;
+    display: block;
+}
+.portfolio img{
+    width: 80%;
     height: auto;
 }
 
 .portfolio .gallery-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
+}
+
+.portfolio h1 {
+    font-size: 3em;
+    line-height: 30px;
+    margin: 0px;
+    margin-bottom: 20px;
+    color:whitesmoke;
+    opacity:90%;
+
+    font-family: Apple-Garamond;
+    font-weight: lighter;
+
+}
+
+.portfolio h5 {
+    font-size: 1em;
+    line-height: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    color:whitesmoke;
+    opacity:90%;
+
+    font-family: Apple-Garamond;
+    font-weight: lighter;
+
+}
+.portfolio p {
+    font-size: 1.2em;
+    margin: 0px;
+    color:whitesmoke;
+    opacity:90%;
+    font-family: Geo-sans-light;
+    
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* ----------------- FOR THE MAIN GALLERY ----------------- */
@@ -211,6 +277,7 @@ header nav a.active {
   margin-bottom: 8px;
 }
 
+
 .art-column-super-container {
     /* border-style: dashed; */
     display: grid;
@@ -218,6 +285,7 @@ header nav a.active {
     gap: 20px;
     width: 100%;
     padding: 30px;
+
     padding-left: 10px;
     box-sizing: border-box;
     position: relative;
@@ -236,6 +304,12 @@ header nav a.active {
     display: block;
 }
 
+.art-super-column p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
+}
+
 .art-column-super-container h3 {
     font-size: 45px;
     line-height: 40px;
@@ -244,6 +318,19 @@ header nav a.active {
     color:whitesmoke;
     opacity:90%;
 }
+.art-column-super-container p {
+    margin: 0px;
+    color:whitesmoke;
+    opacity:90%;
+    
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.text-right {
+    text-align:right;
+}
+
 /* ----------------- FOR THE INFO ----------------- */
 
 .info {
@@ -251,7 +338,8 @@ header nav a.active {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    padding:30px;
+    padding-top:30px;
+    padding-bottom:30px;
     padding-left: 15%;
     padding-right: 15%;
 
@@ -270,6 +358,9 @@ header nav a.active {
 .info p{
     font-weight: light;
     font-family: Geo-sans-light;
+
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .info h6{

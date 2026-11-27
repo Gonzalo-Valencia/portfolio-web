@@ -12,6 +12,135 @@
         <!-- header in header.html -->
         <div id="header"></div>
 
+            <!-------------------------- Paintathon Process -------------------------->
+            <div alt="Paintathon">
+                <div class="art-column-super-container">
+                    <div class="art-super-column">
+                            <span class="text-right">
+                                <h3>Fireside Fables Paintathon - 2026</h3>
+                            </span>
+
+                            <p><br>A paintathon is a digital art event where teams of up to six people work 
+                                together to create a fully fledged illustration in just 24 hours.
+                                Each paintathon starts with the reveal of a theme. This year’s being, 
+                                "The student becomes the master". It's not only a test of artistic skill, but communication, teamwork, 
+                                planning and scheduling through different timezones. <br> <br>
+
+                                My team of 4 started the project with a 30 minute brainstorm 
+                                session, where each one drew between one and four thumbnails. 
+                                After that, the best ideas got polished a bit until we had 
+                                a nice rough piece. Two of us worked on the designs of the characters inside the 
+                                picture, one worked on the design of the environment 
+                                while I planned the composition and a perspective grid. After the 6 hour mark, the project became a juggling of rendering, 
+                                putting our progress together and sleeping. Once everything was in place,
+                                in the last 2 hours, a cohesion pass was made, and the 
+                                image was sent for revision. <br>
+
+                            </p>
+
+                            <div class="art-grid">
+                                <div class="art-column">
+                                    <img 
+                                        src="images/team-work/paintathon-brainstorm-1.png" 
+                                        onclick="openImage(0)"
+                                        class="gallery-img"
+                                    />
+                                </div>
+                                <div class="art-column">
+                                    <img 
+                                        src="images/team-work/paintathon-brainstorm-2.png" 
+                                        onclick="openImage(1)"
+                                        class="gallery-img"
+                                    />
+                                </div>
+                            </div>
+                    </div>
+                    <div class="art-super-column">
+                            <img 
+                                src="images/team-work/paintathon-final.png"
+                                onclick="openImage(2)"
+                                class="gallery-img"
+                            />
+                    </div>
+                    <div id="lightbox" onclick="closeOnOutsideClick(event)">
+                            <span class="close" onclick="closeImage()">&times;</span>
+
+                            <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+
+                            <img id="expanded-img">
+
+                            <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-------------------------- Animation Process -------------------------->
+            <div alt="Animation">
+                <div class="art-column-super-container">
+                    <div class="art-super-column">
+                        <iframe
+                            width="100%"
+                            style="aspect-ratio: 16 / 9; height: auto;"
+                            src="https://www.youtube.com/embed/8UUvaPdm4fs?si=UPnMur9QG4GYW-YS"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="art-super-column">
+                                <h3>Chroma Corps 2026 Animation</h3>
+
+                            <p>Chroma Corps is an annual digital art event in which participants 
+                                try to make an illustration per day given a certain prompt 
+                                over the course of 30 days. This year, 
+                                a team of 30 people got together to create an ending animation to 
+                                celebrate said event. Given the time constraints, this turned out 
+                                to be a monumental task, and a challenge of teamwork over the course of 
+                                barely a week. <br><br>
+                                As part of this team, I worked in colorscripting the animation and 
+                                filling in some standalone frames, such as the mono-colored band 
+                                cards seen at the start.
+</p>
+
+                            <div class="art-grid">
+                                <div class="art-column">
+                                    <img 
+                                        src="images/team-work/cc-collab-colorspript-1.png" 
+                                        onclick="openImage(3)"
+                                        class="gallery-img"
+                                    />
+                                    <img 
+                                        src="images/team-work/bandcards-1.png" 
+                                        onclick="openImage(3)"
+                                        class="gallery-img"
+                                    />
+                                </div>
+                                <div class="art-column">
+                                    <img 
+                                        src="images/team-work/cc-collab-colorscript-2.png" 
+                                        onclick="openImage(0)"
+                                        class="gallery-img"
+                                    />
+                                    <img 
+                                        src="images/team-work/bandcards-2.png" 
+                                        onclick="openImage(3)"
+                                        class="gallery-img"
+                                    />
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div id="lightbox" onclick="closeOnOutsideClick(event)">
+                    <span class="close" onclick="closeImage()">&times;</span>
+
+                    <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+
+                    <img id="expanded-img">
+
+                    <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
+                </div>
+            </div>
 
         <!-- footer in footer.html -->
         <div id="footer"></div>

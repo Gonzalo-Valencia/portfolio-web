@@ -13,43 +13,70 @@
     <body>
         <!-- header in header.html -->
         <div id="header"></div>
+    
 
-        <main class="portfolio">
-            <h1>Character Design</h1>
-            <img 
-                src="images/main-gallery/hirasol.png"
-                alt="Hirasol"
-                onclick="openImage(8)"
-                class="gallery-img"
-            />
-            <h1>Enviroment Design</h1>
-            <img 
-                src="images/main-gallery/hirasol.png"
-                alt="Hirasol"
-                onclick="openImage(8)"
-                class="gallery-img"
-            />
-            <h1>Illustration</h1>
-            <img 
-                src="images/main-gallery/hirasol.png"
-                alt="Hirasol"
-                onclick="openImage(8)"
-                class="gallery-img"
-            />
-            <h1>Prop Design</h1>
-            <img 
-                src="images/main-gallery/hirasol.png"
-                alt="Hirasol"
-                onclick="openImage(8)"
-                class="gallery-img"
-            />
-            <h1>Vehicle Design</h1>
-            <img 
-                src="images/main-gallery/hirasol.png"
-                alt="Hirasol"
-                onclick="openImage(8)"
-                class="gallery-img"
-            />
+
+        <main>
+            <!---------------------------------->
+            <div class="portfolio">
+                <div class="image-info">
+                    <img 
+                        src="images/portfolio/character-design-2.png"
+                        alt="Dont Breathe Concept Art"
+                        onclick="openImage(0)"
+                        class="gallery-img"
+                    />
+
+
+                </div>
+                <div class="text-info">
+                    <h1>Costume Design</h1>
+                    <h5>Don't Breathe - Concept Art</h5>
+                    <br>
+
+                    <p>Iteration of costumes for a personal 1-session horror campaign 
+                        of Call of Cthulhu 7th edition, inspired in the SCP Foundation universe.
+                    </p>
+                </div>
+            </div>
+
+            <!---------------------------------->
+            <div class="portfolio">
+                <div class="text-info">
+                    <span class="text-right">
+                        <h1>Character Design</h1>
+                        <h5>Artaria VI, Baibaluk - Concept Art</h5>
+                    
+                    </span>
+                    <br>
+
+                    <p>Iteration of designs for antagonist in a long term fantasy campaign 
+                        of Call of Cthulhu 7th edition, set in the desert.
+                    
+                    </p>
+                </div>
+                <div class="image-info">
+                    <img 
+                        src="images/portfolio/character-design-1.png"
+                        alt="Baibaluk Iteration"
+                        onclick="openImage(1)"
+                        class="gallery-img"
+                    />
+
+
+                </div>
+
+            </div>
+            <div id="lightbox" onclick="closeOnOutsideClick(event)">
+                <span class="close" onclick="closeImage()">&times;</span>
+
+                <button class="arrow prev" onclick="changeImage(-1)">&#10094;</button>
+
+                <img id="expanded-img">
+
+                <button class="arrow next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+
         </main>
         
         <!-- footer in footer.html -->
