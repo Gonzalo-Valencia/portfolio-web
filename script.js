@@ -61,7 +61,10 @@ function resizeGallery() {
 let galleryImages;
 let galleryIndex = 0;
 
+/* ----------------------------- For showing the lightbox ----------------------------- */
+
 document.addEventListener("DOMContentLoaded", () => {
+    
 
     galleryImages = document.querySelectorAll(".gallery-img:not(video)");
 
@@ -92,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update displayed image
     function updateImage() {
         document.getElementById("expanded-img").src =
-            galleryImages[galleryIndex].src;
+            galleryImages[galleryIndex].dataset.originalSrc;
     }
 
     // Close lightbox
@@ -180,3 +183,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('load', resizeGallery);
 window.addEventListener('resize', resizeGallery);
+
+
+
+/* ----------------------------- For showing the thumbs ----------------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    galleryImages = document.querySelectorAll(".gallery-img:not(video)");
+
+    // Automatically replace image paths with thumbnail paths
+    galleryImages.forEach(img => {
+        img.dataset.originalSrc = img.src;
+
+        img.src = img.src
+            .replace("/images/", "/images/thumbnails/")
+            .replace(/\.[^/.]+$/, ".webp");
+    });
+});
